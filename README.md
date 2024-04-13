@@ -1,6 +1,8 @@
 # DIO - Trilha .NET - Fundamentos
 www.dio.me
 
+## DISCLAIMER: Ao final desse README existe uma implementação na branch **v2** na qual há uma evolução implementada para este desafio. A versão na branch master é a básica para esse desafio.
+
 ## Desafio de projeto
 Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de fundamentos, da trilha .NET da DIO.
 
@@ -33,6 +35,15 @@ Por último, deverá ser feito um menu interativo com as seguintes ações imple
 3. Listar veículos
 4. Encerrar
 
-
 ## Solução
 O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+
+## Solução básica - **Branch Main** e **Branch Release/v1**
+O Código foi alterado e foram criadas as Classes **Menu** , **EstacionamentoController** para separar o Menu da Classe Estacionamento que foi convertida em uma Classe Rica sem comportamentos de Menu para poder respeitar a Separação em Responsabilidades.
+Também foi criada uma Classe **Veiculo** - que na versão 1 só tem uma propriedade chamada **Placa** para poder eliminar ao máximo os tipos primitivos, evitando assim a Primitive Obsessions.
+Foram feitas intervenções pequenas no código apenas para poder resolver os **TODOs** presentes na Classe, mas a versão 2 está mais completa e foi adicionado um Mapa do Estacionamento.
+
+## **Solução com Evolução (Incluindo Mapa do Estacionamento e onde está cada veículo) - Branch Release/v2**
+Nessa versão, inseri a funcionalidade de Mapa de Estacionamento, no qual podemos cadastrar um Estacionamento fictício seguindo uma norma do WMS de Ruas (linhas) e Apartamentos (colunas), onde criamos uma estrutura matricial de Ruas, Andares e números de vaga e trabalhamos com posicionamento, no qual convertemos em coordenadas, por exemplo: Andar 1, Vaga 3 = A3.
+Assim, geramos um Mapa do Estacionamento e vemos as vagas livres e as vagas ocupadas através da Placa do Veículo.
+No momento do Estacionamento, podemos permitir que o Sistema sorteie aonde foi o carro ou podemos escolher em qual local o veículo pode estacionar mostrando no Mapa onde está livre ou ocupado dependendo do Andar da escolha ou visualizar todo o Mapa de Estacionamento.
